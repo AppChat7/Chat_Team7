@@ -138,13 +138,13 @@ public class FriendAroundMapActivity extends AppCompatActivity {
                                         for(Users user : users){
                                             double kc =distanceBetween2Points(mylocation.latitude, mylocation.longitude,user.getLat(),user.getLon());
                                             Log.e("kc "+user.getName(), ": "+kc  );
-                                            //10km
-                                            //if(kc<10){
+
+                                            if(kc<10){
                                                 mMap.addMarker(new MarkerOptions()
                                                         .position(new LatLng(user.getLat(),user.getLon()))
                                                         .title(user.getName())
                                                 );
-                                            //}
+                                            }
 
 
                                         }
