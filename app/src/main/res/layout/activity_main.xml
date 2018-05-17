@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.vinhtruong.chatapp_team7.com.example.vinhtruong.chatappteam7.Activity.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:fitsSystemWindows="false"
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/app_bar_layout"
+                    android:id="@+id/mainToolbar"/>
+                <android.support.design.widget.TabLayout
+                    app:tabSelectedTextColor="@color/colorWhite"
+                    android:id="@+id/mainTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.design.widget.TabLayout>
+            </android.support.design.widget.AppBarLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mainViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            app:menu="@menu/main_menu"
+            app:headerLayout="@layout/header_navigation"
+            android:id="@+id/navigationview"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/user"
+        android:id="@+id/imgGroup"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtNameUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:textSize="22sp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/imgGroup"
+        android:layout_toRightOf="@+id/imgGroup"
+        android:text="Group name" />
+
+    <TextView
+        android:textStyle="italic"
+        android:id="@+id/txtCreator"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@id/imgGroup"
+        android:layout_below="@id/txtNameUsers"
+        android:text="Created by ..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/btnDeleteRoom"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/delete"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

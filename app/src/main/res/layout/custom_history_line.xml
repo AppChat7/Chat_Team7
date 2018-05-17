@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:text="Bạn đã cập nhật trạng thái:"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:layout_below="@+id/txtTitle"
+        android:textSize="20sp"
+        android:text="Default content"
+        android:id="@+id/txtContentHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtDate"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:text="00:00 1/1/1970"
+        android:layout_below="@+id/txtContentHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
