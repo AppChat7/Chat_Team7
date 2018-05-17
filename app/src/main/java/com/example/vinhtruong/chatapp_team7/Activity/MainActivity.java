@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         Log.e("Last Know location: ", mylocation.latitude + " " + mylocation.longitude);
                         mUserRef.child("lat").setValue(mylocation.latitude);
-                        mUserRef.child("long").setValue(mylocation.longitude);
+                        mUserRef.child("lon").setValue(mylocation.longitude);
                     }
                 });
     }
