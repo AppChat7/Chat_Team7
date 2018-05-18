@@ -134,17 +134,22 @@ public class FriendAroundMapActivity extends AppCompatActivity {
                                                 .radius(5000) // 5km
                                                 .strokeColor(Color.BLUE).strokeWidth(2)
                                                 .fillColor(Color.TRANSPARENT));
+                                        mMap.addCircle(new CircleOptions()
+                                                .center(new LatLng(mylocation.latitude, mylocation.longitude))
+                                                .radius(10000) // 10km
+                                                .strokeColor(Color.RED).strokeWidth(2)
+                                                .fillColor(Color.TRANSPARENT));
 
                                         for(Users user : users){
                                             double kc =distanceBetween2Points(mylocation.latitude, mylocation.longitude,user.getLat(),user.getLon());
                                             Log.e("kc "+user.getName(), ": "+kc  );
-                                            //10km
-                                            //if(kc<10){
+
+                                            if(kc<10){
                                                 mMap.addMarker(new MarkerOptions()
                                                         .position(new LatLng(user.getLat(),user.getLon()))
                                                         .title(user.getName())
                                                 );
-                                            //}
+                                            }
 
 
                                         }
